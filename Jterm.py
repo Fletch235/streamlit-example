@@ -1,4 +1,3 @@
-
 import yfinance as yf
 import streamlit as st
 from datetime import date
@@ -16,6 +15,10 @@ print("Today's date:", today)
 
 
 slider = st.sidebar.slider('choose year for data',2010, 2021,2010)
+
+slider2 = st.sidebar.slider('choose month for data',1, 12,1)
+
+slider3 = st.sidebar.slider('choose day for data',1, 30,1)
 #st.slider("Number of turns in spiral", 1, 100, 9)
 
 add_selectbox = st.sidebar.selectbox(
@@ -48,7 +51,7 @@ if ticker_input:
     load_data()
 
 
-slider_minval = str(slider)[0:4]+str(today)[4:]
+slider_minval = str(slider)[0:4]+'-'+str(slider2)+'-'+str(slider3)
 #slider_maxval = str(slider)[7:11]+str(today)[4:]
 tickerData = yf.Ticker(str(tickerSymbol))
 tickerDf = tickerData.history(period='1m', start=slider_minval, end=today)
