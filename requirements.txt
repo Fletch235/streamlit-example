@@ -2,3 +2,5 @@ altair
 pandas
 streamlit
 yfinance
+json
+matplotlib.pyplot
