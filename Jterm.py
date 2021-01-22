@@ -4,6 +4,7 @@ import streamlit as st
 from datetime import date
 import pandas as pd
 import json
+import matplotlib
 
 PYPL = pd.read_csv('PYPL.csv')
 NVDA = pd.read_csv('NVDA.csv')
