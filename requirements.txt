@@ -3,4 +3,4 @@ pandas
 streamlit
 yfinance
 json
-matplotlib
+matplotlib==1.4.3
