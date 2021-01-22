@@ -3,4 +3,4 @@ pandas
 streamlit
 yfinance
 json
-matplotlib.pyplot
+matplotlib
