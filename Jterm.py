@@ -25,10 +25,9 @@ today = date.today()
 
 
 
-
-   add_selectbox = st.sidebar.selectbox(
-    'Choose which stock you want twitter data for',
-    ('PYPL','NVDA','UNH','TSLA','BAC')
+add_selectbox = st.sidebar.selectbox(
+   'Choose which stock you want twitter data for',
+   ('PYPL','NVDA','UNH','TSLA','BAC')
 
 
 
