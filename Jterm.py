@@ -1,4 +1,3 @@
-
 import yfinance as yf
 import streamlit as st
 from datetime import date
@@ -25,10 +24,15 @@ today = date.today()
 
 
 
-add_selectbox = st.sidebar.selectbox(
-   'Choose which stock you want twitter data for',
-   ('PYPL','NVDA','UNH','TSLA','BAC')
-
+mode_selectbox = st.selectbox(
+    'select mode',
+    ('Twitter data','Stocks')
+)
+if mode_selectbox == 'Twitter data':
+   add_selectbox = st.sidebar.selectbox(
+    'Choose which stock you want twitter data for',
+    ('PYPL','NVDA','UNH','TSLA','BAC')
+    )
 
 
    if add_selectbox == 'PYPL':
